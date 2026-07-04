@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUp, BadgeCheck, Briefcase, ChevronDown, Code2, Compass
 import { useTheme } from 'next-themes';
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
+import { portfolioProjects } from '@/data/portfolio-projects';
 
 const services = [
   { title: 'Shopify Store Creation', description: 'Launch polished storefronts tailored to your brand and sales goals.', icon: Rocket },
@@ -27,14 +28,7 @@ const skills = [
   'Shopify', 'Liquid', 'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Git', 'GitHub', 'Figma to Shopify', 'Responsive Design', 'SEO', 'Performance Optimization'
 ];
 
-const projects = [
-  { name: 'Luxury Fashion Store', category: 'Luxury Ecommerce', image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80', tech: ['Shopify', 'Liquid', 'Tailwind'], demo: '#', caseStudy: '#' },
-  { name: 'Furniture Store', category: 'Home Decor', image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80', tech: ['Shopify', 'Sections', 'SEO'], demo: '#', caseStudy: '#' },
-  { name: 'Electronics Store', category: 'Tech Retail', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80', tech: ['Shopify', 'App Integrations', 'Speed'], demo: '#', caseStudy: '#' },
-  { name: 'Cosmetics Store', category: 'Beauty Brand', image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80', tech: ['Shopify', 'Custom Sections', 'UX'], demo: '#', caseStudy: '#' },
-  { name: 'Jewelry Store', category: 'Luxury Accessories', image: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80', tech: ['Shopify', 'Animation', 'Conversion'], demo: '#', caseStudy: '#' },
-  { name: 'Fitness Brand', category: 'Activewear', image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80', tech: ['Shopify', 'Liquid', 'Performance'], demo: '#', caseStudy: '#' },
-];
+const projects = portfolioProjects;
 
 const whyChoose = [
   { title: 'Fast Delivery', icon: Rocket },
