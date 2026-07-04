@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-zinc-900 antialiased transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100;
+}
+
+::selection {
+  @apply bg-emerald-500/30 text-zinc-900 dark:text-white;
+}
+
+.glass {
+  @apply border border-white/40 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-zinc-900/70;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight sm:text-4xl;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent;
+}
